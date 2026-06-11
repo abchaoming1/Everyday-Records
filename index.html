@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Everyday Records</title>
+  <link rel="icon" href="assets/records-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-lockup" aria-label="Everyday Records">
+        <img src="assets/records-mark.svg" alt="" class="brand-mark">
+        <div>
+          <p class="eyebrow">Everyday Records</p>
+          <h1>每日信息、知识与项目进度</h1>
+        </div>
+      </div>
+      <div class="header-meta">
+        <span id="updatedAt">正在读取数据</span>
+        <span class="data-pill" id="dateRange">--</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="layout">
+    <section class="toolbar" aria-label="筛选">
+      <label class="search-field">
+        <span>搜索</span>
+        <input id="searchInput" type="search" placeholder="渠道、项目、联系人、关键词" autocomplete="off">
+      </label>
+      <label>
+        <span>模块</span>
+        <select id="moduleFilter"></select>
+      </label>
+      <label>
+        <span>项目</span>
+        <select id="projectFilter"></select>
+      </label>
+      <label>
+        <span>状态</span>
+        <select id="statusFilter"></select>
+      </label>
+      <label>
+        <span>日期</span>
+        <input id="dateFilter" type="date">
+      </label>
+      <button class="icon-button" id="resetFilters" type="button" title="清空筛选" aria-label="清空筛选">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M8 6v12m8-12v12M6 18h12" /></svg>
+      </button>
+    </section>
+
+    <section class="stats-grid" aria-label="统计概览">
+      <article class="stat-card">
+        <span>记录</span>
+        <strong id="recordCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>待办</span>
+        <strong id="todoCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>项目</span>
+        <strong id="projectCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>模块</span>
+        <strong id="moduleCount">0</strong>
+      </article>
+    </section>
+
+    <section class="panel latest-panel" aria-labelledby="latestTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Latest Snapshot</p>
+          <h2 id="latestTitle">最新记录</h2>
+        </div>
+        <span id="latestDate" class="data-pill">--</span>
+      </div>
+      <div id="latestList" class="record-strip"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="projectTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Project Tracker</p>
+          <h2 id="projectTitle">按模块和项目追踪</h2>
+        </div>
+        <p class="section-note">每个模块单独成行，项目内按实际日期倒序显示。</p>
+      </div>
+      <div id="projectTracker" class="module-stack"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="todoTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Action Queue</p>
+          <h2 id="todoTitle">待办与风险</h2>
+        </div>
+      </div>
+      <div id="todoList" class="todo-grid"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="timelineTitle">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Timeline</p>
+          <h2 id="timelineTitle">完整时间线</h2>
+        </div>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </main>
+
+  <script src="data/records.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
