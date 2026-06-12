@@ -26,6 +26,7 @@ MODULES = [
 STATUSES = ["待处理", "等待回复", "已回复", "有风险", "已完成", "仅参考"]
 
 FILE_RE = re.compile(r"^(\d{4}-\d{2}-\d{2})-工作-信息与知识\.docx$")
+TIME_RE = re.compile(r"^\d{1,2}:\d{2}$")
 
 
 def normalize_text(value: str) -> str:
@@ -136,6 +137,8 @@ def iter_records(records_root: Path) -> list[dict]:
                 if row_index == 0 and "时间" in cells[0]:
                     continue
                 time, original, concise = cells[:3]
+                if not TIME_RE.match(time):
+                    continue
                 if not any([time, original, concise]):
                     continue
                 module = infer_module(concise)
