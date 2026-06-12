@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11 17:51:59",
+  "generated_at": "2026-06-12 17:52:04",
   "records": [
     {
       "id": "2026-04-29-0001",
@@ -363,6 +363,28 @@
       "original": "NFM：\n新店的事情这个是不是还没后续？",
       "concise": "NATM / NFM：NFM 新店事项目前记录中尚未看到明确后续，需继续跟进确认。等待回复：后续需确认新店项目是否已有进展、负责人反馈或下一步时间点。",
       "source_file": "2026-05-18-工作-信息与知识.docx"
+    },
+    {
+      "id": "2026-06-12-0034",
+      "date": "2026-06-12",
+      "time": "??",
+      "module": "其他不相关的",
+      "project": "其他不相关的 日常跟进",
+      "status": "仅参考",
+      "original": "?????",
+      "concise": "??????????",
+      "source_file": "2026-06-12-工作-信息与知识.docx"
+    },
+    {
+      "id": "2026-06-12-0035",
+      "date": "2026-06-12",
+      "time": "17:51",
+      "module": "NATM",
+      "project": "Other NATM",
+      "status": "待处理",
+      "original": "BE替换包：POPKIT-C901-GQNA1  30pcs\nNT替换包：POPKIT-C901-DYNA1  18pcs\n这两个NATM替换包已经入了SEKO，快点发出去！",
+      "concise": "NATM / Other NATM：两款 NATM 替换包已入 SEKO，需要尽快安排发出。明细：BE 替换包 POPKIT-C901-GQNA1 共 30 pcs；NT 替换包 POPKIT-C901-DYNA1 共 18 pcs。待处理：催促 SEKO 尽快发货并跟进出库/物流状态。",
+      "source_file": "2026-06-12-工作-信息与知识.docx"
     }
   ]
 }
